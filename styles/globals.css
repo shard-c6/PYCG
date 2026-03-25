@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0e131e;
+    --surface-1: #171b27;
+    --surface-2: #1b1f2b;
+    --surface-3: #303541;
+    --accent: #7bd1fa;
+    --text-primary: #dee2f2;
+    --text-muted: #c6c6cc;
+    --text-soft: #bfc6dd;
+    --border-ghost: rgba(69, 70, 76, 0.15);
+    --error: #ffb4ab;
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--text-primary)] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}

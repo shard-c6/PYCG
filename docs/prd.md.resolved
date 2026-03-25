@@ -1,0 +1,67 @@
+# GlobalLedger: Product Requirements Document (PRD)
+
+## 1. Overview
+**GlobalLedger** is a premium, minimalist interactive 3D web application for visualizing and comparing global GDP data. It is an evolution of a previous conceptual project, pivoting from a neon-heavy cyberpunk aesthetic to a clean, professional, "Luminous Monolith" identity.
+
+**Core value proposition:** Provide an intuitive and beautiful space to explore global economic trends (1995–2023) by seamless transitioning between a macroscopic globe view and a detailed, microscopic data analysis dashboard.
+
+## 2. Target Audience
+*   Financial Analysts
+*   Economics Students and Educators
+*   Data Visualization Enthusiasts
+*   Professionals looking for polished reporting interfaces
+
+## 3. Design System ("The Luminous Monolith")
+*   **Base Theme:** Dark Navy (`#0e131e`)
+*   **Primary Accent:** Soft Cyan (`#7bd1fa`)
+*   **Typography:** Inter (Sans-serif, minimal styles, tracking adjusted)
+*   **Aesthetic Rules:** 
+    * No audio elements.
+    * No heavy effects like matrix rain.
+    * Use of "ghost" borders (virtually invisible) and soft backdrop blurring.
+    * Ample breathing room to establish a premium, editorial feel.
+
+## 4. User Flow & Core Features
+
+### 4.1 "Globe View" (The Default State)
+*   **The Globe:** A realistic, Google Earth-style 3D globe rendered using Three.js (`MeshStandardMaterial`). The surface uses a high-resolution NASA "Blue Marble" satellite texture (`earth_blue_marble.jpg`) paired with a physical topology bump map (`earth_topology.png`). An emissive map guarantees the globe remains fully illuminated from all angles during rotation.
+*   **Atmospheric Glow:** A subtle Fresnel rim effect on the atmosphere.
+*   **Data Points:** Countries are indicated by clean glowing spherical markers (`<CountryMarkers />`). The country dots are intentionally displayed without name text labels to keep the globe clean; tapping a dot opens the Dashboard.
+*   **Coordinate System:** The geographic projection uses a single, canonical [latLngToVector3()](file:///c:/PYCG/lib/utils.ts#3-12) function shared by both the country markers and any future overlay layers, ensuring pixel-perfect alignment across texture skin changes.
+*   **Controls/HUD:** 
+    *   Top left header establishing the GlobalLedger brand.
+    *   Sleek bottom-centered `<TimelineSlider />` mapping 1995–2023, updating a global parameter that reacts in the 3D scene (e.g. marker magnitude). 
+*   **Interaction:** Tapping a country marker immediately begins a 500ms crossfade into the Dashboard View.
+
+### 4.2 "Dashboard View" (Country Detail State)
+*   **Transition Focus:** Smooth, full-screen takeover replacing the 3D scene (via `AnimatePresence` crossfade), ensuring a highly professional transition reminiscent of high-end financial tools without slide-in clutter.
+*   **Navigation:** A "← Back to Globe" sticky header button allows simple dismissal.
+*   **Hero Section:** Prominently displays the Country Name (e.g., "United States"), its 3-letter code, and its nominal GDP for the selected year in massive, light-weight typography.
+*   **Metrics Grid:** 4-column layout presenting high-level economic indicators:
+    *   GDP Growth
+    *   GDP Per Capita
+    *   Inflation
+    *   Unemployment
+*   **Data Visualization:** Prominent Line Chart (`<GDPChart>`) mapping GDP trends across time.
+    *   Main Trace: Country data.
+    *   Ghost Trace: A dashed average of global GDP across the matching timeframe as a benchmark.
+    *   X-Axis synchronizes with the universal `<TimelineSlider>`.
+
+## 5. Technical Architecture
+
+### 5.1 Frontend Tech Stack
+*   **Framework:** Next.js (App Router)
+*   **3D Rendering:** Three.js via React Three Fiber (R3F) & GSAP
+*   **2D Transitions & UI:** Framer Motion, Tailwind CSS, Recharts (for Dashboard data)
+*   **Post-processing:** `@react-three/postprocessing`
+
+### 5.2 Python Data Analysis Pipeline
+*   **Engine:** Python (standard library / Pandas conceptual mapping)
+*   **Source:** A static `gdp.json` file living in the `public/` directory, acting as a processed Data Mart.
+*   **Generation:** A custom Python script ([scripts/pipeline.py](file:///c:/PYCG/scripts/pipeline.py)) acts as the core analytics engine. It calculates year-over-year deltas (YoY growth), normalizes historic datasets across 54+ countries, computes a dynamic global average index, and builds the strict typed JSON artifact.
+*   **Rationale:** Showcases a robust Python back-end processing methodology. Extracting heavy data manipulation from the JavaScript runtime into an offline Python data pipeline guarantees 0ms latency in the client and perfectly positions the project as a Python Data Analysis showcase.
+
+## 6. Success Constraints
+1.  **UX Excellence:** The transition between Globe and Dashboard must not exhibit clipping, z-index bugs, or jank. 
+2.  **Visual Excellence:** Final product must align *precisely* with the Stitch Mockups.
+3.  **Lighthouse Performance:** Score >90 for desktop execution. Use LOD (Level of Detail) on the globe when zooming to manage memory.
