@@ -66,7 +66,7 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
         ) : (
           <>
             {/* Hero Card */}
-            <div className="relative overflow-hidden rounded-3xl p-10 bg-gradient-to-br from-[var(--surface-2)] to-[var(--bg)] border border-[var(--border-ghost)] shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl p-10 bg-gradient-to-br from-[var(--surface-1)] via-[var(--bg)] to-black border border-[var(--border-ghost)] shadow-2xl">
               <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div>
                   <div className="flex items-center gap-4 mb-2">
@@ -74,7 +74,7 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
                     <span className="px-3 py-1 rounded-full bg-[var(--surface-3)] text-xs font-semibold tracking-wider text-[var(--text-muted)]">{data?.country}</span>
                   </div>
                   <div className="text-[var(--text-muted)] text-sm uppercase tracking-widest mt-6">Nominal GDP ({activeYear})</div>
-                  <div className="text-5xl md:text-6xl font-light text-[var(--accent)] tracking-tighter mt-2 shadow-[0_0_15px_rgba(123,209,250,0.15)]">
+                  <div className="font-fira-code text-5xl md:text-6xl font-light text-[var(--accent)] tracking-tighter mt-2 shadow-[0_0_20px_rgba(123,209,250,0.3)]">
                     {currentMetric ? formatCurrency(currentMetric.value) : 'N/A'}
                   </div>
                 </div>
@@ -88,6 +88,39 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
               <MetricCard label="Inflation" value={data?.inflation ? `${data.inflation}%` : 'N/A'} />
               <MetricCard label="Unemployment" value={data?.unemployment ? `${data.unemployment}%` : 'N/A'} />
             </div>
+
+            {/* AI Insights Section */}
+            {data?.analytics && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-indigo-900/20 to-transparent p-6 rounded-2xl border border-indigo-500/20 flex flex-col justify-center relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <div className="w-16 h-16 rounded-full border-4 border-indigo-500" />
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+                    <div className="text-indigo-300 text-xs uppercase tracking-wider">AI Projection (2030)</div>
+                  </div>
+                  <div className="font-fira-code text-3xl font-light text-white">
+                    {formatCurrency(data.analytics.prediction_2030 || 0)}
+                  </div>
+                  <div className="text-[10px] text-indigo-400/60 mt-2 uppercase tracking-tight">Model: {data.analytics.forecasting_model}</div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-emerald-900/20 to-transparent p-6 rounded-2xl border border-emerald-500/20 flex flex-col justify-center relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <div className="w-16 h-16 border-t-4 border-r-4 border-emerald-500 rotate-45" />
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                    <div className="text-emerald-300 text-xs uppercase tracking-wider">Economic Momentum</div>
+                  </div>
+                  <div className="font-fira-code text-3xl font-light text-white">
+                    {data.analytics.momentum_score}%
+                  </div>
+                  <div className="text-[10px] text-emerald-400/60 mt-2 uppercase tracking-tight">Relative to historical trend</div>
+                </div>
+              </div>
+            )}
 
             {/* Chart Area */}
             <div className="bg-[var(--surface-2)] rounded-3xl p-8 border border-[var(--border-ghost)]">
@@ -125,10 +158,17 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
 
 function MetricCard({ label, value }: { label: string; value: React.ReactNode }) {
   const isNegative = typeof value === 'string' && value.startsWith('-');
+  const isPositive = typeof value === 'string' && value.startsWith('+');
+  
+  let valueColor = 'text-[var(--text-primary)]';
+  if (isNegative) valueColor = 'text-[var(--error)]';
+  if (isPositive) valueColor = 'text-[var(--accent-good)]';
+  
   return (
-    <div className="bg-[var(--surface-2)] p-6 rounded-2xl border border-[var(--border-ghost)] flex flex-col justify-center">
-      <div className="text-[var(--text-muted)] text-xs uppercase tracking-wider mb-2">{label}</div>
-      <div className={`text-2xl font-normal tracking-tight ${isNegative ? 'text-[var(--error)]' : 'text-[var(--text-primary)]'}`}>
+    <div className="group cursor-pointer hover:-translate-y-1 hover:shadow-2xl hover:border-slate-600 transition-all duration-300 bg-[var(--surface-2)] p-6 rounded-2xl border border-[var(--border-ghost)] flex flex-col justify-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="text-[var(--text-muted)] text-xs uppercase tracking-wider mb-2 group-hover:text-[var(--text-soft)] transition-colors">{label}</div>
+      <div className={`font-fira-code text-2xl font-normal tracking-tight ${valueColor}`}>
         {value}
       </div>
     </div>

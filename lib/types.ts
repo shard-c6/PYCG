@@ -21,6 +21,11 @@ export interface GDPResponse {
   currency: string;
   data_year: number;
   delta?: number;
+  analytics?: {
+    prediction_2030?: number;
+    momentum_score?: number;
+    forecasting_model?: string;
+  };
 }
 
 export interface GDPDatabase {

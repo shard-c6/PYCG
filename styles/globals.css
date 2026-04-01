@@ -1,23 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --bg: #0e131e;
-    --surface-1: #171b27;
-    --surface-2: #1b1f2b;
-    --surface-3: #303541;
-    --accent: #7bd1fa;
-    --text-primary: #dee2f2;
-    --text-muted: #c6c6cc;
-    --text-soft: #bfc6dd;
-    --border-ghost: rgba(69, 70, 76, 0.15);
-    --error: #ffb4ab;
+    --bg: #020617;
+    --surface-1: #0f172a;
+    --surface-2: #1e293b;
+    --surface-3: #334155;
+    --accent: #7bd1fa; /* Kept universal cyan to preserve existing component integrity */
+    --accent-good: #22c55e; /* Success Green for financials */
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-soft: #cbd5e1;
+    --border-ghost: rgba(30, 41, 59, 1);
+    --error: #f43f5e;
   }
 
   body {
     @apply bg-[var(--bg)] text-[var(--text-primary)] antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
   }
+}
+
+.font-fira-code {
+  font-family: 'Fira Code', monospace;
 }

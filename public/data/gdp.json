@@ -645,393 +645,6 @@
       "data_year": 2023,
       "delta": -0.45
     },
-    "DEU": {
-      "country": "DEU",
-      "name": "Germany",
-      "gdp": [
-        {
-          "year": 1995,
-          "value": 2592000000000
-        },
-        {
-          "year": 1996,
-          "value": 2477000000000
-        },
-        {
-          "year": 1997,
-          "value": 2216000000000
-        },
-        {
-          "year": 1998,
-          "value": 2242000000000
-        },
-        {
-          "year": 1999,
-          "value": 2197000000000
-        },
-        {
-          "year": 2000,
-          "value": 1948000000000
-        },
-        {
-          "year": 2001,
-          "value": 1942000000000
-        },
-        {
-          "year": 2002,
-          "value": 2078000000000
-        },
-        {
-          "year": 2003,
-          "value": 2441000000000
-        },
-        {
-          "year": 2004,
-          "value": 2726000000000
-        },
-        {
-          "year": 2005,
-          "value": 2860000000000
-        },
-        {
-          "year": 2006,
-          "value": 2995000000000
-        },
-        {
-          "year": 2007,
-          "value": 3439000000000
-        },
-        {
-          "year": 2008,
-          "value": 3748000000000
-        },
-        {
-          "year": 2009,
-          "value": 3418000000000
-        },
-        {
-          "year": 2010,
-          "value": 3417000000000
-        },
-        {
-          "year": 2011,
-          "value": 3757000000000
-        },
-        {
-          "year": 2012,
-          "value": 3527000000000
-        },
-        {
-          "year": 2013,
-          "value": 3752000000000
-        },
-        {
-          "year": 2014,
-          "value": 3879000000000
-        },
-        {
-          "year": 2015,
-          "value": 3356000000000
-        },
-        {
-          "year": 2016,
-          "value": 3467000000000
-        },
-        {
-          "year": 2017,
-          "value": 3693000000000
-        },
-        {
-          "year": 2018,
-          "value": 3997000000000
-        },
-        {
-          "year": 2019,
-          "value": 3889000000000
-        },
-        {
-          "year": 2020,
-          "value": 3846000000000
-        },
-        {
-          "year": 2021,
-          "value": 4260000000000
-        },
-        {
-          "year": 2022,
-          "value": 4076000000000
-        },
-        {
-          "year": 2023,
-          "value": 4456000000000
-        }
-      ],
-      "growth": -0.3,
-      "per_capita": 53390,
-      "inflation": 5.9,
-      "unemployment": 3,
-      "currency": "EUR",
-      "data_year": 2023,
-      "delta": 9.32
-    },
-    "BRA": {
-      "country": "BRA",
-      "name": "Brazil",
-      "gdp": [
-        {
-          "year": 1995,
-          "value": 786000000000
-        },
-        {
-          "year": 1996,
-          "value": 840000000000
-        },
-        {
-          "year": 1997,
-          "value": 887000000000
-        },
-        {
-          "year": 1998,
-          "value": 844000000000
-        },
-        {
-          "year": 1999,
-          "value": 589000000000
-        },
-        {
-          "year": 2000,
-          "value": 655000000000
-        },
-        {
-          "year": 2001,
-          "value": 559000000000
-        },
-        {
-          "year": 2002,
-          "value": 507000000000
-        },
-        {
-          "year": 2003,
-          "value": 558000000000
-        },
-        {
-          "year": 2004,
-          "value": 669000000000
-        },
-        {
-          "year": 2005,
-          "value": 882000000000
-        },
-        {
-          "year": 2006,
-          "value": 1089000000000
-        },
-        {
-          "year": 2007,
-          "value": 1397000000000
-        },
-        {
-          "year": 2008,
-          "value": 1695000000000
-        },
-        {
-          "year": 2009,
-          "value": 1667000000000
-        },
-        {
-          "year": 2010,
-          "value": 2208000000000
-        },
-        {
-          "year": 2011,
-          "value": 2616000000000
-        },
-        {
-          "year": 2012,
-          "value": 2465000000000
-        },
-        {
-          "year": 2013,
-          "value": 2472000000000
-        },
-        {
-          "year": 2014,
-          "value": 2455000000000
-        },
-        {
-          "year": 2015,
-          "value": 1800000000000
-        },
-        {
-          "year": 2016,
-          "value": 1795000000000
-        },
-        {
-          "year": 2017,
-          "value": 2063000000000
-        },
-        {
-          "year": 2018,
-          "value": 1916000000000
-        },
-        {
-          "year": 2019,
-          "value": 1873000000000
-        },
-        {
-          "year": 2020,
-          "value": 1444000000000
-        },
-        {
-          "year": 2021,
-          "value": 1649000000000
-        },
-        {
-          "year": 2022,
-          "value": 1920000000000
-        },
-        {
-          "year": 2023,
-          "value": 2173000000000
-        }
-      ],
-      "growth": 2.9,
-      "per_capita": 10297,
-      "inflation": 4.7,
-      "unemployment": 8,
-      "currency": "BRL",
-      "data_year": 2023,
-      "delta": 13.18
-    },
-    "ZAF": {
-      "country": "ZAF",
-      "name": "South Africa",
-      "gdp": [
-        {
-          "year": 1995,
-          "value": 151000000000
-        },
-        {
-          "year": 1996,
-          "value": 148000000000
-        },
-        {
-          "year": 1997,
-          "value": 152000000000
-        },
-        {
-          "year": 1998,
-          "value": 136000000000
-        },
-        {
-          "year": 1999,
-          "value": 135000000000
-        },
-        {
-          "year": 2000,
-          "value": 135000000000
-        },
-        {
-          "year": 2001,
-          "value": 122000000000
-        },
-        {
-          "year": 2002,
-          "value": 113000000000
-        },
-        {
-          "year": 2003,
-          "value": 167000000000
-        },
-        {
-          "year": 2004,
-          "value": 216000000000
-        },
-        {
-          "year": 2005,
-          "value": 248000000000
-        },
-        {
-          "year": 2006,
-          "value": 272000000000
-        },
-        {
-          "year": 2007,
-          "value": 316000000000
-        },
-        {
-          "year": 2008,
-          "value": 287000000000
-        },
-        {
-          "year": 2009,
-          "value": 296000000000
-        },
-        {
-          "year": 2010,
-          "value": 375000000000
-        },
-        {
-          "year": 2011,
-          "value": 418000000000
-        },
-        {
-          "year": 2012,
-          "value": 397000000000
-        },
-        {
-          "year": 2013,
-          "value": 366000000000
-        },
-        {
-          "year": 2014,
-          "value": 350000000000
-        },
-        {
-          "year": 2015,
-          "value": 316000000000
-        },
-        {
-          "year": 2016,
-          "value": 295000000000
-        },
-        {
-          "year": 2017,
-          "value": 349000000000
-        },
-        {
-          "year": 2018,
-          "value": 368000000000
-        },
-        {
-          "year": 2019,
-          "value": 352000000000
-        },
-        {
-          "year": 2020,
-          "value": 302000000000
-        },
-        {
-          "year": 2021,
-          "value": 419000000000
-        },
-        {
-          "year": 2022,
-          "value": 406000000000
-        },
-        {
-          "year": 2023,
-          "value": 377000000000
-        }
-      ],
-      "growth": 0.6,
-      "per_capita": 6132,
-      "inflation": 6,
-      "unemployment": 32.9,
-      "currency": "ZAR",
-      "data_year": 2023,
-      "delta": -7.14
-    },
     "CAN": {
       "country": "CAN",
       "name": "CAN",
@@ -1153,10 +766,10 @@
           "value": 1917993223054
         }
       ],
-      "growth": 2.4,
-      "per_capita": 29965,
-      "inflation": 4.6,
-      "unemployment": 10.2,
+      "growth": 2.9,
+      "per_capita": 10643,
+      "inflation": 5.0,
+      "unemployment": 4.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1282,10 +895,10 @@
           "value": 1531705802897
         }
       ],
-      "growth": 1.5,
-      "per_capita": 21302,
-      "inflation": 2.5,
-      "unemployment": 8.4,
+      "growth": 4.9,
+      "per_capita": 2176,
+      "inflation": 5.2,
+      "unemployment": 8.6,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1411,10 +1024,10 @@
           "value": 1512884374073
         }
       ],
-      "growth": 1.9,
-      "per_capita": 17399,
-      "inflation": 4,
-      "unemployment": 9.7,
+      "growth": 3.9,
+      "per_capita": 13467,
+      "inflation": 7.7,
+      "unemployment": 12.0,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1540,10 +1153,10 @@
           "value": 1668833355760
         }
       ],
-      "growth": 2.1,
-      "per_capita": 6073,
-      "inflation": 6.9,
-      "unemployment": 9.8,
+      "growth": 4.9,
+      "per_capita": 3241,
+      "inflation": 6.8,
+      "unemployment": 13.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1669,10 +1282,10 @@
           "value": 1417880971435
         }
       ],
-      "growth": 4.6,
-      "per_capita": 10138,
-      "inflation": 3.8,
-      "unemployment": 11,
+      "growth": 4.4,
+      "per_capita": 8728,
+      "inflation": 7.0,
+      "unemployment": 4.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1798,10 +1411,10 @@
           "value": 1141833348678
         }
       ],
-      "growth": 1.7,
-      "per_capita": 13038,
-      "inflation": 5.2,
-      "unemployment": 7.5,
+      "growth": 4.2,
+      "per_capita": 22952,
+      "inflation": 3.9,
+      "unemployment": 3.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -1927,10 +1540,10 @@
           "value": 1228770424676
         }
       ],
-      "growth": 2.2,
-      "per_capita": 6800,
-      "inflation": 5.3,
-      "unemployment": 13,
+      "growth": 3.4,
+      "per_capita": 26473,
+      "inflation": 5.9,
+      "unemployment": 12.5,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2056,10 +1669,10 @@
           "value": 978714298867
         }
       ],
-      "growth": 4,
-      "per_capita": 11661,
-      "inflation": 5.6,
-      "unemployment": 11.4,
+      "growth": 1.5,
+      "per_capita": 16644,
+      "inflation": 2.8,
+      "unemployment": 7.2,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2185,10 +1798,10 @@
           "value": 956307835981
         }
       ],
-      "growth": 2.6,
-      "per_capita": 29077,
-      "inflation": 7.1,
-      "unemployment": 14.9,
+      "growth": 5.0,
+      "per_capita": 3359,
+      "inflation": 5.8,
+      "unemployment": 6.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2314,10 +1927,10 @@
           "value": 922250012394
         }
       ],
-      "growth": 3.6,
-      "per_capita": 8532,
-      "inflation": 4.2,
-      "unemployment": 6.9,
+      "growth": 4.8,
+      "per_capita": 21311,
+      "inflation": 4.3,
+      "unemployment": 7.6,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2443,10 +2056,10 @@
           "value": 811113956479
         }
       ],
-      "growth": 2.1,
-      "per_capita": 22680,
-      "inflation": 6,
-      "unemployment": 5.3,
+      "growth": 3.0,
+      "per_capita": 17308,
+      "inflation": 6.7,
+      "unemployment": 4.4,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2572,10 +2185,10 @@
           "value": 726865656027
         }
       ],
-      "growth": 4.9,
-      "per_capita": 13140,
-      "inflation": 3.7,
-      "unemployment": 10.4,
+      "growth": 4.3,
+      "per_capita": 11453,
+      "inflation": 6.7,
+      "unemployment": 13.2,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2701,10 +2314,10 @@
           "value": 573605449885
         }
       ],
-      "growth": 4.2,
-      "per_capita": 17721,
-      "inflation": 5.8,
-      "unemployment": 7.6,
+      "growth": 1.7,
+      "per_capita": 31561,
+      "inflation": 2.1,
+      "unemployment": 11.5,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2830,10 +2443,10 @@
           "value": 535066333721
         }
       ],
-      "growth": 2.9,
-      "per_capita": 2173,
-      "inflation": 2.9,
-      "unemployment": 4.4,
+      "growth": 5.5,
+      "per_capita": 29718,
+      "inflation": 3.3,
+      "unemployment": 9.4,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -2959,10 +2572,10 @@
           "value": 559265313638
         }
       ],
-      "growth": 2.8,
-      "per_capita": 15673,
-      "inflation": 3.3,
-      "unemployment": 6.5,
+      "growth": 1.6,
+      "per_capita": 11952,
+      "inflation": 2.6,
+      "unemployment": 10.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3088,10 +2701,10 @@
           "value": 514452387866
         }
       ],
-      "growth": 2.4,
-      "per_capita": 6522,
-      "inflation": 4.1,
-      "unemployment": 8.2,
+      "growth": 2.7,
+      "per_capita": 28166,
+      "inflation": 6.3,
+      "unemployment": 13.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3217,10 +2830,10 @@
           "value": 427515311868
         }
       ],
-      "growth": 1.6,
-      "per_capita": 31608,
-      "inflation": 2.1,
-      "unemployment": 6.1,
+      "growth": 4.8,
+      "per_capita": 5896,
+      "inflation": 7.0,
+      "unemployment": 8.9,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3346,10 +2959,10 @@
           "value": 462469393970
         }
       ],
-      "growth": 2.1,
-      "per_capita": 18112,
-      "inflation": 3.1,
-      "unemployment": 4.6,
+      "growth": 4.4,
+      "per_capita": 26581,
+      "inflation": 4.3,
+      "unemployment": 6.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3475,10 +3088,10 @@
           "value": 447232999208
         }
       ],
-      "growth": 3.2,
-      "per_capita": 21070,
-      "inflation": 7.9,
-      "unemployment": 12.6,
+      "growth": 4.1,
+      "per_capita": 24687,
+      "inflation": 5.0,
+      "unemployment": 10.9,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3605,9 +3218,9 @@
         }
       ],
       "growth": 5.1,
-      "per_capita": 16583,
-      "inflation": 3.3,
-      "unemployment": 8.6,
+      "per_capita": 25267,
+      "inflation": 7.0,
+      "unemployment": 9.9,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3733,10 +3346,10 @@
           "value": 456195584362
         }
       ],
-      "growth": 2.9,
-      "per_capita": 13094,
-      "inflation": 7.7,
-      "unemployment": 9.4,
+      "growth": 5.3,
+      "per_capita": 27134,
+      "inflation": 4.1,
+      "unemployment": 4.4,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3862,10 +3475,10 @@
           "value": 363880957271
         }
       ],
-      "growth": 2,
-      "per_capita": 20833,
-      "inflation": 7.8,
-      "unemployment": 4.6,
+      "growth": 5.0,
+      "per_capita": 7174,
+      "inflation": 4.1,
+      "unemployment": 4.5,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -3991,10 +3604,10 @@
           "value": 449025516238
         }
       ],
-      "growth": 4.6,
-      "per_capita": 20318,
+      "growth": 2.7,
+      "per_capita": 26372,
       "inflation": 3.6,
-      "unemployment": 13.7,
+      "unemployment": 7.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4120,10 +3733,10 @@
           "value": 385391161642
         }
       ],
-      "growth": 5.3,
-      "per_capita": 21986,
-      "inflation": 6.7,
-      "unemployment": 10.6,
+      "growth": 2.1,
+      "per_capita": 4066,
+      "inflation": 4.6,
+      "unemployment": 6.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4249,10 +3862,10 @@
           "value": 362088440240
         }
       ],
-      "growth": 2,
-      "per_capita": 3401,
-      "inflation": 5.6,
-      "unemployment": 3.5,
+      "growth": 2.5,
+      "per_capita": 13803,
+      "inflation": 7.5,
+      "unemployment": 8.2,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4378,10 +3991,10 @@
           "value": 412278917105
         }
       ],
-      "growth": 5.2,
-      "per_capita": 11541,
-      "inflation": 2.5,
-      "unemployment": 5.4,
+      "growth": 1.8,
+      "per_capita": 31486,
+      "inflation": 6.0,
+      "unemployment": 8.0,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4507,10 +4120,10 @@
           "value": 354918372117
         }
       ],
-      "growth": 3.8,
-      "per_capita": 15941,
-      "inflation": 2.5,
-      "unemployment": 4.7,
+      "growth": 5.1,
+      "per_capita": 8514,
+      "inflation": 7.7,
+      "unemployment": 4.3,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4636,10 +4249,10 @@
           "value": 308312929313
         }
       ],
-      "growth": 1.6,
-      "per_capita": 21694,
-      "inflation": 2.3,
-      "unemployment": 4.3,
+      "growth": 3.7,
+      "per_capita": 17526,
+      "inflation": 4.9,
+      "unemployment": 8.8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4765,10 +4378,10 @@
           "value": 273358847211
         }
       ],
-      "growth": 4.6,
-      "per_capita": 23166,
-      "inflation": 2.1,
-      "unemployment": 7.1,
+      "growth": 4.0,
+      "per_capita": 17212,
+      "inflation": 3.2,
+      "unemployment": 13.2,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -4894,10 +4507,10 @@
           "value": 268877554634
         }
       ],
-      "growth": 2.4,
-      "per_capita": 22470,
-      "inflation": 4.5,
-      "unemployment": 12.4,
+      "growth": 1.6,
+      "per_capita": 21720,
+      "inflation": 6.4,
+      "unemployment": 8.2,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5023,10 +4636,10 @@
           "value": 295765310097
         }
       ],
-      "growth": 4.5,
-      "per_capita": 11733,
-      "inflation": 2.3,
-      "unemployment": 14.1,
+      "growth": 2.1,
+      "per_capita": 28503,
+      "inflation": 4.7,
+      "unemployment": 3.9,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5152,10 +4765,10 @@
           "value": 248263608779
         }
       ],
-      "growth": 2.9,
-      "per_capita": 22074,
-      "inflation": 7.5,
-      "unemployment": 13.4,
+      "growth": 4.8,
+      "per_capita": 5217,
+      "inflation": 2.3,
+      "unemployment": 11.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5281,10 +4894,10 @@
           "value": 236612248078
         }
       ],
-      "growth": 3.9,
-      "per_capita": 22673,
-      "inflation": 3.7,
-      "unemployment": 8.7,
+      "growth": 5.2,
+      "per_capita": 10546,
+      "inflation": 6.9,
+      "unemployment": 9.4,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5410,10 +5023,10 @@
           "value": 221375853315
         }
       ],
-      "growth": 5.4,
-      "per_capita": 30067,
-      "inflation": 6.1,
-      "unemployment": 8.9,
+      "growth": 3.5,
+      "per_capita": 12023,
+      "inflation": 3.6,
+      "unemployment": 8.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5539,10 +5152,10 @@
           "value": 240197282140
         }
       ],
-      "growth": 4.3,
-      "per_capita": 11515,
-      "inflation": 3.9,
-      "unemployment": 4.4,
+      "growth": 1.9,
+      "per_capita": 20807,
+      "inflation": 6.4,
+      "unemployment": 6.6,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5668,10 +5281,10 @@
           "value": 215998302222
         }
       ],
-      "growth": 2.6,
-      "per_capita": 22235,
-      "inflation": 7.3,
-      "unemployment": 13.9,
+      "growth": 3.6,
+      "per_capita": 30093,
+      "inflation": 6.4,
+      "unemployment": 11.3,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5797,10 +5410,10 @@
           "value": 232130955500
         }
       ],
-      "growth": 4.4,
-      "per_capita": 20667,
-      "inflation": 5.8,
-      "unemployment": 5.5,
+      "growth": 2.5,
+      "per_capita": 25269,
+      "inflation": 2.6,
+      "unemployment": 7.6,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -5926,10 +5539,10 @@
           "value": 325341841107
         }
       ],
-      "growth": 3.4,
-      "per_capita": 28504,
-      "inflation": 4.6,
-      "unemployment": 12.6,
+      "growth": 3.1,
+      "per_capita": 18016,
+      "inflation": 6.0,
+      "unemployment": 8.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6055,10 +5668,10 @@
           "value": 204346941522
         }
       ],
-      "growth": 3.7,
-      "per_capita": 19664,
-      "inflation": 7.4,
-      "unemployment": 10.4,
+      "growth": 3.1,
+      "per_capita": 6855,
+      "inflation": 5.1,
+      "unemployment": 8.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6184,10 +5797,10 @@
           "value": 189110546759
         }
       ],
-      "growth": 1.6,
-      "per_capita": 19498,
-      "inflation": 5.3,
-      "unemployment": 12.4,
+      "growth": 3.8,
+      "per_capita": 5203,
+      "inflation": 4.6,
+      "unemployment": 9.5,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6313,10 +5926,10 @@
           "value": 305624153767
         }
       ],
-      "growth": 3.3,
-      "per_capita": 3519,
-      "inflation": 4.5,
-      "unemployment": 13,
+      "growth": 4.6,
+      "per_capita": 17622,
+      "inflation": 3.8,
+      "unemployment": 14.0,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6442,10 +6055,10 @@
           "value": 155948981688
         }
       ],
-      "growth": 3.9,
-      "per_capita": 20309,
-      "inflation": 5.2,
-      "unemployment": 11.7,
+      "growth": 2.6,
+      "per_capita": 18270,
+      "inflation": 2.2,
+      "unemployment": 6.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6571,10 +6184,10 @@
           "value": 139816328410
         }
       ],
-      "growth": 5.1,
-      "per_capita": 26036,
-      "inflation": 7.7,
-      "unemployment": 10.5,
+      "growth": 3.9,
+      "per_capita": 16940,
+      "inflation": 3.2,
+      "unemployment": 8.1,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6700,10 +6313,10 @@
           "value": 70804422720
         }
       ],
-      "growth": 2.8,
-      "per_capita": 26093,
-      "inflation": 7.8,
-      "unemployment": 13.3,
+      "growth": 3.1,
+      "per_capita": 25578,
+      "inflation": 2.2,
+      "unemployment": 14.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6829,10 +6442,10 @@
           "value": 2732692213595
         }
       ],
-      "growth": 1.6,
-      "per_capita": 18774,
-      "inflation": 3.9,
-      "unemployment": 6,
+      "growth": 5.0,
+      "per_capita": 3948,
+      "inflation": 7.9,
+      "unemployment": 7.7,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6958,10 +6571,10 @@
           "value": 2020166693815
         }
       ],
-      "growth": 1.7,
-      "per_capita": 4799,
-      "inflation": 7.4,
-      "unemployment": 9.2,
+      "growth": 3.7,
+      "per_capita": 19749,
+      "inflation": 3.6,
+      "unemployment": 7.4,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
@@ -6970,119 +6583,119 @@
   "globalAverage": [
     {
       "year": 1995,
-      "value": 612483692137.7407
+      "value": 579316066185.0588
     },
     {
       "year": 1996,
-      "value": 624268306373.7407
+      "value": 593048794983.9608
     },
     {
       "year": 1997,
-      "value": 635828800144.1296
+      "value": 609406964858.4902
     },
     {
       "year": 1998,
-      "value": 643721250619.8704
+      "value": 618410735950.4509
     },
     {
       "year": 1999,
-      "value": 664766084646.463
+      "value": 646595462174.6863
     },
     {
       "year": 2000,
-      "value": 688367055964.5
+      "value": 675172961217.3137
     },
     {
       "year": 2001,
-      "value": 690358589167.4073
+      "value": 679536545392.9412
     },
     {
       "year": 2002,
-      "value": 707932758558.0555
+      "value": 696673901218.3334
     },
     {
       "year": 2003,
-      "value": 758464489285.2778
+      "value": 741001616105.9803
     },
     {
       "year": 2004,
-      "value": 816826666045.5927
+      "value": 794071371891.4117
     },
     {
       "year": 2005,
-      "value": 865973565836.7963
+      "value": 838677893238.9608
     },
     {
       "year": 2006,
-      "value": 907908133786.6852
+      "value": 875902729891.7843
     },
     {
       "year": 2007,
-      "value": 969158440109.1666
+      "value": 925148152272.4509
     },
     {
       "year": 2008,
-      "value": 1014068227467
+      "value": 961366358494.4706
     },
     {
       "year": 2009,
-      "value": 997916671464.0186
+      "value": 951107848216.804
     },
     {
       "year": 2010,
-      "value": 1063043794028.1666
+      "value": 1007928723088.6471
     },
     {
       "year": 2011,
-      "value": 1141797836483.6296
+      "value": 1075805552355.2157
     },
     {
       "year": 2012,
-      "value": 1185226975914
+      "value": 1129671699987.3726
     },
     {
       "year": 2013,
-      "value": 1221854615903.926
+      "value": 1164512730564.9412
     },
     {
       "year": 2014,
-      "value": 1275647737058.389
+      "value": 1219627015708.8823
     },
     {
       "year": 2015,
-      "value": 1281060963879.2222
+      "value": 1249123373519.1765
     },
     {
       "year": 2016,
-      "value": 1311223972429.9075
+      "value": 1279394010023.8235
     },
     {
       "year": 2017,
-      "value": 1366658851957.1853
+      "value": 1327344666778.196
     },
     {
       "year": 2018,
-      "value": 1430269108452.2036
+      "value": 1391245722674.8823
     },
     {
       "year": 2019,
-      "value": 1465092836409.0925
+      "value": 1431392415021.392
     },
     {
       "year": 2020,
-      "value": 1446574959055.7778
+      "value": 1422020544882.5881
     },
     {
       "year": 2021,
-      "value": 1591242264424.2778
+      "value": 1560766319194.3333
     },
     {
       "year": 2022,
-      "value": 1658477607109.537
+      "value": 1630505701645.392
     },
     {
       "year": 2023,
-      "value": 1729400769695.5
+      "value": 1693757677716.804
     }
   ]
 }
