@@ -78,6 +78,16 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
                     {currentMetric ? formatCurrency(currentMetric.value) : 'N/A'}
                   </div>
                 </div>
+                
+                <div className="flex flex-col gap-3">
+                   <a 
+                    href={`${process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8000'}/api/export/${data?.country}`}
+                    className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-[var(--text-primary)] text-sm transition-all group"
+                  >
+                    <span>Download Dataset</span>
+                    <span className="text-[var(--text-muted)] text-[10px] group-hover:text-white transition-colors">(.CSV)</span>
+                  </a>
+                </div>
               </div>
             </div>
 
