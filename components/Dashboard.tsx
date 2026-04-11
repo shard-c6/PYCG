@@ -5,6 +5,7 @@ import { Country, GDPResponse } from '@/lib/types';
 import { getCountryData } from '@/lib/data';
 import GDPChart from './GDPChart';
 import TimelineSlider from './TimelineSlider';
+import ReservesAnalysis from './ReservesAnalysis';
 
 interface DashboardProps {
   country: Country | null;
@@ -71,7 +72,7 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
                 <div>
                   <div className="flex items-center gap-4 mb-2">
                     <h1 className="text-4xl md:text-5xl font-light text-[var(--text-primary)] tracking-tight">{data?.name}</h1>
-                    <span className="px-3 py-1 rounded-full bg-[var(--surface-3)] text-xs font-semibold tracking-wider text-[var(--text-muted)]">{data?.country}</span>
+                    <span className="px-3 py-1 rounded-full bg-[var(--surface-3)] text-xs font-semibold tracking-wider text-[var(--text-muted)]">{data?.name}</span>
                   </div>
                   <div className="text-[var(--text-muted)] text-sm uppercase tracking-widest mt-6">Nominal GDP ({activeYear})</div>
                   <div className="font-fira-code text-5xl md:text-6xl font-light text-[var(--accent)] tracking-tighter mt-2 shadow-[0_0_20px_rgba(123,209,250,0.3)]">
@@ -159,6 +160,9 @@ export default function Dashboard({ country, onBack, activeYear, onYearChange }:
             <div className="pt-4 pb-12 w-full flex justify-center">
                <TimelineSlider min={1995} max={2023} value={activeYear} onChange={onYearChange} />
             </div>
+
+            {/* Reserves Analysis Section */}
+            <ReservesAnalysis />
           </>
         )}
       </main>

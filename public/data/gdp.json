@@ -647,7 +647,7 @@
     },
     "CAN": {
       "country": "CAN",
-      "name": "CAN",
+      "name": "Canada",
       "gdp": [
         {
           "year": 1995,
@@ -768,7 +768,7 @@
       ],
       "growth": 2.9,
       "per_capita": 10643,
-      "inflation": 5.0,
+      "inflation": 5,
       "unemployment": 4.7,
       "currency": "USD",
       "data_year": 2023,
@@ -776,7 +776,7 @@
     },
     "KOR": {
       "country": "KOR",
-      "name": "KOR",
+      "name": "South Korea",
       "gdp": [
         {
           "year": 1995,
@@ -905,7 +905,7 @@
     },
     "AUS": {
       "country": "AUS",
-      "name": "AUS",
+      "name": "Australia",
       "gdp": [
         {
           "year": 1995,
@@ -1027,14 +1027,14 @@
       "growth": 3.9,
       "per_capita": 13467,
       "inflation": 7.7,
-      "unemployment": 12.0,
+      "unemployment": 12,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
     },
     "RUS": {
       "country": "RUS",
-      "name": "RUS",
+      "name": "Russia",
       "gdp": [
         {
           "year": 1995,
@@ -1163,7 +1163,7 @@
     },
     "ESP": {
       "country": "ESP",
-      "name": "ESP",
+      "name": "Spain",
       "gdp": [
         {
           "year": 1995,
@@ -1284,7 +1284,7 @@
       ],
       "growth": 4.4,
       "per_capita": 8728,
-      "inflation": 7.0,
+      "inflation": 7,
       "unemployment": 4.1,
       "currency": "USD",
       "data_year": 2023,
@@ -1292,7 +1292,7 @@
     },
     "MEX": {
       "country": "MEX",
-      "name": "MEX",
+      "name": "Mexico",
       "gdp": [
         {
           "year": 1995,
@@ -1421,7 +1421,7 @@
     },
     "IDN": {
       "country": "IDN",
-      "name": "IDN",
+      "name": "Indonesia",
       "gdp": [
         {
           "year": 1995,
@@ -1550,7 +1550,7 @@
     },
     "NLD": {
       "country": "NLD",
-      "name": "NLD",
+      "name": "Netherlands",
       "gdp": [
         {
           "year": 1995,
@@ -1679,7 +1679,7 @@
     },
     "SAU": {
       "country": "SAU",
-      "name": "SAU",
+      "name": "Saudi Arabia",
       "gdp": [
         {
           "year": 1995,
@@ -1798,7 +1798,7 @@
           "value": 956307835981
         }
       ],
-      "growth": 5.0,
+      "growth": 5,
       "per_capita": 3359,
       "inflation": 5.8,
       "unemployment": 6.1,
@@ -1808,7 +1808,7 @@
     },
     "TUR": {
       "country": "TUR",
-      "name": "TUR",
+      "name": "Turkey",
       "gdp": [
         {
           "year": 1995,
@@ -1937,7 +1937,7 @@
     },
     "CHE": {
       "country": "CHE",
-      "name": "CHE",
+      "name": "Switzerland",
       "gdp": [
         {
           "year": 1995,
@@ -2056,7 +2056,7 @@
           "value": 811113956479
         }
       ],
-      "growth": 3.0,
+      "growth": 3,
       "per_capita": 17308,
       "inflation": 6.7,
       "unemployment": 4.4,
@@ -2066,7 +2066,7 @@
     },
     "POL": {
       "country": "POL",
-      "name": "POL",
+      "name": "Poland",
       "gdp": [
         {
           "year": 1995,
@@ -2195,7 +2195,7 @@
     },
     "ARG": {
       "country": "ARG",
-      "name": "ARG",
+      "name": "Argentina",
       "gdp": [
         {
           "year": 1995,
@@ -2324,7 +2324,7 @@
     },
     "SWE": {
       "country": "SWE",
-      "name": "SWE",
+      "name": "Sweden",
       "gdp": [
         {
           "year": 1995,
@@ -2453,7 +2453,7 @@
     },
     "BEL": {
       "country": "BEL",
-      "name": "BEL",
+      "name": "Belgium",
       "gdp": [
         {
           "year": 1995,
@@ -2582,7 +2582,7 @@
     },
     "THA": {
       "country": "THA",
-      "name": "THA",
+      "name": "Thailand",
       "gdp": [
         {
           "year": 1995,
@@ -2711,7 +2711,7 @@
     },
     "NGA": {
       "country": "NGA",
-      "name": "NGA",
+      "name": "Nigeria",
       "gdp": [
         {
           "year": 1995,
@@ -2832,7 +2832,7 @@
       ],
       "growth": 4.8,
       "per_capita": 5896,
-      "inflation": 7.0,
+      "inflation": 7,
       "unemployment": 8.9,
       "currency": "USD",
       "data_year": 2023,
@@ -2840,7 +2840,7 @@
     },
     "AUT": {
       "country": "AUT",
-      "name": "AUT",
+      "name": "Austria",
       "gdp": [
         {
           "year": 1995,
@@ -2969,7 +2969,7 @@
     },
     "ARE": {
       "country": "ARE",
-      "name": "ARE",
+      "name": "United Arab Emirates",
       "gdp": [
         {
           "year": 1995,
@@ -3090,7 +3090,7 @@
       ],
       "growth": 4.1,
       "per_capita": 24687,
-      "inflation": 5.0,
+      "inflation": 5,
       "unemployment": 10.9,
       "currency": "USD",
       "data_year": 2023,
@@ -3098,7 +3098,7 @@
     },
     "NOR": {
       "country": "NOR",
-      "name": "NOR",
+      "name": "Norway",
       "gdp": [
         {
           "year": 1995,
@@ -3219,7 +3219,7 @@
       ],
       "growth": 5.1,
       "per_capita": 25267,
-      "inflation": 7.0,
+      "inflation": 7,
       "unemployment": 9.9,
       "currency": "USD",
       "data_year": 2023,
@@ -3227,7 +3227,7 @@
     },
     "ISR": {
       "country": "ISR",
-      "name": "ISR",
+      "name": "Israel",
       "gdp": [
         {
           "year": 1995,
@@ -3356,7 +3356,7 @@
     },
     "DNK": {
       "country": "DNK",
-      "name": "DNK",
+      "name": "Denmark",
       "gdp": [
         {
           "year": 1995,
@@ -3475,7 +3475,7 @@
           "value": 363880957271
         }
       ],
-      "growth": 5.0,
+      "growth": 5,
       "per_capita": 7174,
       "inflation": 4.1,
       "unemployment": 4.5,
@@ -3485,7 +3485,7 @@
     },
     "SGP": {
       "country": "SGP",
-      "name": "SGP",
+      "name": "Singapore",
       "gdp": [
         {
           "year": 1995,
@@ -3614,7 +3614,7 @@
     },
     "MYS": {
       "country": "MYS",
-      "name": "MYS",
+      "name": "Malaysia",
       "gdp": [
         {
           "year": 1995,
@@ -3743,7 +3743,7 @@
     },
     "PHL": {
       "country": "PHL",
-      "name": "PHL",
+      "name": "Philippines",
       "gdp": [
         {
           "year": 1995,
@@ -3872,7 +3872,7 @@
     },
     "BGD": {
       "country": "BGD",
-      "name": "BGD",
+      "name": "Bangladesh",
       "gdp": [
         {
           "year": 1995,
@@ -3993,15 +3993,15 @@
       ],
       "growth": 1.8,
       "per_capita": 31486,
-      "inflation": 6.0,
-      "unemployment": 8.0,
+      "inflation": 6,
+      "unemployment": 8,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
     },
     "EGY": {
       "country": "EGY",
-      "name": "EGY",
+      "name": "Egypt",
       "gdp": [
         {
           "year": 1995,
@@ -4130,7 +4130,7 @@
     },
     "CHL": {
       "country": "CHL",
-      "name": "CHL",
+      "name": "Chile",
       "gdp": [
         {
           "year": 1995,
@@ -4259,7 +4259,7 @@
     },
     "FIN": {
       "country": "FIN",
-      "name": "FIN",
+      "name": "Finland",
       "gdp": [
         {
           "year": 1995,
@@ -4378,7 +4378,7 @@
           "value": 273358847211
         }
       ],
-      "growth": 4.0,
+      "growth": 4,
       "per_capita": 17212,
       "inflation": 3.2,
       "unemployment": 13.2,
@@ -4388,7 +4388,7 @@
     },
     "ROU": {
       "country": "ROU",
-      "name": "ROU",
+      "name": "Romania",
       "gdp": [
         {
           "year": 1995,
@@ -4517,7 +4517,7 @@
     },
     "CZE": {
       "country": "CZE",
-      "name": "CZE",
+      "name": "Czech Republic",
       "gdp": [
         {
           "year": 1995,
@@ -4646,7 +4646,7 @@
     },
     "PRT": {
       "country": "PRT",
-      "name": "PRT",
+      "name": "Portugal",
       "gdp": [
         {
           "year": 1995,
@@ -4775,7 +4775,7 @@
     },
     "IRQ": {
       "country": "IRQ",
-      "name": "IRQ",
+      "name": "Iraq",
       "gdp": [
         {
           "year": 1995,
@@ -4904,7 +4904,7 @@
     },
     "NZL": {
       "country": "NZL",
-      "name": "NZL",
+      "name": "New Zealand",
       "gdp": [
         {
           "year": 1995,
@@ -5033,7 +5033,7 @@
     },
     "PER": {
       "country": "PER",
-      "name": "PER",
+      "name": "Peru",
       "gdp": [
         {
           "year": 1995,
@@ -5162,7 +5162,7 @@
     },
     "GRC": {
       "country": "GRC",
-      "name": "GRC",
+      "name": "Greece",
       "gdp": [
         {
           "year": 1995,
@@ -5291,7 +5291,7 @@
     },
     "KAZ": {
       "country": "KAZ",
-      "name": "KAZ",
+      "name": "Kazakhstan",
       "gdp": [
         {
           "year": 1995,
@@ -5420,7 +5420,7 @@
     },
     "COL": {
       "country": "COL",
-      "name": "COL",
+      "name": "Colombia",
       "gdp": [
         {
           "year": 1995,
@@ -5541,7 +5541,7 @@
       ],
       "growth": 3.1,
       "per_capita": 18016,
-      "inflation": 6.0,
+      "inflation": 6,
       "unemployment": 8.1,
       "currency": "USD",
       "data_year": 2023,
@@ -5549,7 +5549,7 @@
     },
     "DZA": {
       "country": "DZA",
-      "name": "DZA",
+      "name": "Algeria",
       "gdp": [
         {
           "year": 1995,
@@ -5678,7 +5678,7 @@
     },
     "QAT": {
       "country": "QAT",
-      "name": "QAT",
+      "name": "Qatar",
       "gdp": [
         {
           "year": 1995,
@@ -5807,7 +5807,7 @@
     },
     "PAK": {
       "country": "PAK",
-      "name": "PAK",
+      "name": "Pakistan",
       "gdp": [
         {
           "year": 1995,
@@ -5929,14 +5929,14 @@
       "growth": 4.6,
       "per_capita": 17622,
       "inflation": 3.8,
-      "unemployment": 14.0,
+      "unemployment": 14,
       "currency": "USD",
       "data_year": 2023,
       "delta": 4.38
     },
     "UKR": {
       "country": "UKR",
-      "name": "UKR",
+      "name": "Ukraine",
       "gdp": [
         {
           "year": 1995,
@@ -6065,7 +6065,7 @@
     },
     "ETH": {
       "country": "ETH",
-      "name": "ETH",
+      "name": "Ethiopia",
       "gdp": [
         {
           "year": 1995,
@@ -6194,7 +6194,7 @@
     },
     "TZA": {
       "country": "TZA",
-      "name": "TZA",
+      "name": "Tanzania",
       "gdp": [
         {
           "year": 1995,
@@ -6323,7 +6323,7 @@
     },
     "FRA": {
       "country": "FRA",
-      "name": "FRA",
+      "name": "France",
       "gdp": [
         {
           "year": 1995,
@@ -6442,7 +6442,7 @@
           "value": 2732692213595
         }
       ],
-      "growth": 5.0,
+      "growth": 5,
       "per_capita": 3948,
       "inflation": 7.9,
       "unemployment": 7.7,
@@ -6452,7 +6452,7 @@
     },
     "ITA": {
       "country": "ITA",
-      "name": "ITA",
+      "name": "Italy",
       "gdp": [
         {
           "year": 1995,
