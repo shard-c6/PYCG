@@ -3,6 +3,7 @@ export interface Country {
   code: string;
   lat: number;
   lng: number;
+  timezone?: string;
 }
 
 export interface GDPDataPoint {

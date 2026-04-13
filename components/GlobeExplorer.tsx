@@ -24,6 +24,7 @@ export default function GlobeExplorer() {
 
   const handleBack = () => {
     setView('globe');
+    setSelectedCountry(null);
   };
 
   return (

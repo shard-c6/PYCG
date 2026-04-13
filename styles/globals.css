@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,266 +6,161 @@
 
 @layer base {
   :root {
-    --bg: #020617;
-    --surface-1: #0f172a;
-    --surface-2: #1e293b;
-    --surface-3: #334155;
-    --accent: #7bd1fa; /* Kept universal cyan to preserve existing component integrity */
-    --accent-good: #22c55e; /* Success Green for financials */
+    --bg: #030407;
+    --surface-1: #0a0c12;
+    --surface-2: #12151e;
+    --surface-3: #1a1e2b;
+    --border-ghost: rgba(255, 255, 255, 0.05);
+    --accent: #7bd1fa;
+    --accent-soft: rgba(123, 209, 250, 0.2);
+    --accent-good: #10b981;
+    --error: #ef4444;
     --text-primary: #f8fafc;
-    --text-muted: #94a3b8;
     --text-soft: #cbd5e1;
-    --border-ghost: rgba(30, 41, 59, 1);
-    --error: #f43f5e;
+    --text-muted: #64748b;
+    --font-inter: 'Inter', sans-serif;
+    --font-fira-code: 'Fira Code', monospace;
   }
 
   body {
-    @apply bg-[var(--bg)] text-[var(--text-primary)] antialiased;
-    font-family: 'Fira Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
-.font-fira-code {
-  font-family: 'Fira Code', monospace;
+@layer components {
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--surface-3);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+
+  /* Typography Utilities */
+  .font-fira-code {
+    font-family: var(--font-fira-code);
+  }
+
+  /* Animation Utilities */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   Reserves Analysis Section
-   ═══════════════════════════════════════════════════════════════════════════ */
-
-.reserves-analysis-section {
-  width: 100%;
-  margin-top: 1rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-ghost);
+/* Globe marker tooltip drift animation — outside @layer so inline styles can reference it */
+@keyframes markerDrift {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.reserves-section-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
+@layer components {
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
 
-.reserves-section-title {
-  font-size: 1.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--text-primary);
-  margin: 0 0 0.75rem;
-}
+  /* Reserves Analysis Styles (Simplified for Production) */
+  .reserves-analysis-section {
+    padding: 4rem 0;
+  }
 
-.reserves-section-divider {
-  width: 60px;
-  height: 2px;
-  margin: 0 auto 1rem;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  border-radius: 2px;
-}
+  .reserves-section-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 
-.reserves-section-subtitle {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+  .reserves-section-title {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: white;
+  }
 
-/* ── Chart Grid ──────────────────────────────────────────────────────────── */
+  .reserves-section-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    margin: 1.5rem auto;
+    opacity: 0.5;
+  }
 
-.reserves-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
-}
+  .reserves-section-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
 
-@media (min-width: 768px) {
   .reserves-grid {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
-  /* Full-width for the first and last card */
-  .reserves-grid > .reserves-chart-card:first-child,
-  .reserves-grid > .reserves-chart-card:last-child {
-    grid-column: 1 / -1;
+
+  @media (min-width: 768px) {
+    .reserves-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
-}
 
-/* ── Chart Card ──────────────────────────────────────────────────────────── */
-
-.reserves-chart-card {
-  background: var(--surface-2);
-  border: 1px solid var(--border-ghost);
-  border-radius: 1.25rem;
-  padding: 1.75rem 2rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.reserves-chart-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(123, 209, 250, 0.04) 0%, transparent 60%);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.reserves-chart-card:hover {
-  border-color: rgba(123, 209, 250, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(123, 209, 250, 0.08);
-  transform: translateY(-2px);
-}
-
-.reserves-chart-card:hover::before {
-  opacity: 1;
-}
-
-/* ── Chart Header ────────────────────────────────────────────────────────── */
-
-.reserves-chart-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-  position: relative;
-  z-index: 1;
-}
-
-.reserves-chart-title {
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-/* ── Info Tooltip ────────────────────────────────────────────────────────── */
-
-.reserves-info-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--surface-3);
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  font-style: normal;
-  cursor: help;
-  position: relative;
-  transition: background 0.2s ease, color 0.2s ease;
-  flex-shrink: 0;
-}
-
-.reserves-info-icon:hover,
-.reserves-info-icon:focus {
-  background: var(--accent);
-  color: var(--bg);
-  outline: none;
-}
-
-.reserves-info-tooltip {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(15, 23, 42, 0.96);
-  backdrop-filter: blur(12px);
-  color: var(--text-soft);
-  font-size: 0.75rem;
-  line-height: 1.5;
-  padding: 0.625rem 0.875rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(123, 209, 250, 0.15);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 50;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  animation: reservesFadeIn 0.15s ease-out;
-}
-
-.reserves-info-tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: rgba(15, 23, 42, 0.96);
-}
-
-@keyframes reservesFadeIn {
-  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
-  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-/* ── Chart Body / Canvas ─────────────────────────────────────────────────── */
-
-.reserves-chart-body {
-  position: relative;
-  z-index: 1;
-}
-
-.reserves-canvas-wrap {
-  position: relative;
-  width: 100%;
-}
-
-.reserves-canvas-wide {
-  height: 320px;
-}
-
-.reserves-canvas-square {
-  height: 340px;
-}
-
-@media (min-width: 768px) {
-  .reserves-canvas-wide {
-    height: 360px;
+  .reserves-chart-card {
+    background: var(--surface-1);
+    border: 1px solid var(--border-ghost);
+    border-radius: 1.25rem;
+    padding: 1.75rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
   }
-  .reserves-canvas-square {
-    height: 360px;
+
+  .reserves-chart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
   }
-}
 
-.reserves-canvas-wrap canvas {
-  width: 100% !important;
-  height: 100% !important;
-}
+  .reserves-chart-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
 
-/* ── Loading State ───────────────────────────────────────────────────────── */
-
-.reserves-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 280px;
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  letter-spacing: 0.06em;
-  animation: reservesPulse 1.6s ease-in-out infinite;
-}
-
-@keyframes reservesPulse {
-  0%, 100% { opacity: 0.5; }
-  50%      { opacity: 1; }
-}
-
-/* ── Source Citation ──────────────────────────────────────────────────────── */
-
-.reserves-chart-source {
-  margin: 1.25rem 0 0;
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  opacity: 0.6;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
-  transition: opacity 0.2s ease;
-}
-
-.reserves-chart-card:hover .reserves-chart-source {
-  opacity: 0.85;
+  .reserves-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--surface-3);
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    cursor: help;
+  }
 }

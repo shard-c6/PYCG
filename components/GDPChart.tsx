@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ResponsiveContainer,
   LineChart,
@@ -20,7 +20,7 @@ interface GDPChartProps {
   countryCode: string;
 }
 
-export default function GDPChart({ countryData, activeYear }: GDPChartProps) {
+const GDPChart = React.memo(({ countryData, activeYear }: GDPChartProps) => {
   const [globalAvg, setGlobalAvg] = useState<GDPDataPoint[]>([]);
 
   useEffect(() => {
@@ -47,52 +47,60 @@ export default function GDPChart({ countryData, activeYear }: GDPChartProps) {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={mergedData} margin={{ top: 20, right: 0, left: 10, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
+      <LineChart data={mergedData} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
+        <defs>
+          <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="var(--accent)" stopOpacity={0.3}/>
+            <stop offset="95%" stopColor="var(--accent)" stopOpacity={0}/>
+          </linearGradient>
+        </defs>
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" vertical={false} />
         <XAxis 
           dataKey="year" 
-          stroke="var(--text-muted)" 
-          tick={{ fill: 'var(--text-muted)', fontSize: 12 }} 
-          tickMargin={10}
+          stroke="rgba(255,255,255,0.2)" 
+          tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 10 }} 
+          tickMargin={12}
           axisLine={false}
           tickLine={false}
         />
         <YAxis 
-          stroke="var(--text-muted)" 
+          stroke="rgba(255,255,255,0.2)" 
           tickFormatter={formatYAxis} 
-          tick={{ fill: 'var(--text-muted)', fontSize: 12 }}
+          tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 10 }}
           axisLine={false}
           tickLine={false}
-          width={60}
+          width={45}
         />
         <Tooltip 
           contentStyle={{ 
             backgroundColor: 'var(--surface-3)', 
             border: '1px solid var(--border-ghost)',
-            borderRadius: '8px',
-            color: 'var(--text-primary)'
+            borderRadius: '12px',
+            color: 'var(--text-primary)',
+            backdropFilter: 'blur(10px)',
+            fontSize: '12px'
           }}
-          labelStyle={{ color: 'var(--text-muted)', marginBottom: '4px' }}
+          labelStyle={{ color: 'var(--text-muted)', marginBottom: '6px' }}
           formatter={(val: number, name: string) => [
             formatYAxis(val), 
-            name === 'countryValue' ? 'Country GDP' : 'Global Avg'
+            name === 'countryValue' ? 'Sovereign GDP' : 'Global Baseline'
           ]}
         />
         
-        {/* Active Year Guide */}
         <ReferenceLine 
           x={activeYear} 
-          stroke="var(--text-soft)" 
-          strokeDasharray="3 3" 
-          opacity={0.5} 
+          stroke="var(--accent)" 
+          strokeWidth={1}
+          strokeDasharray="4 4" 
+          opacity={0.3} 
         />
 
         <Line
           type="monotone"
           dataKey="globalValue"
-          stroke="var(--text-soft)"
+          stroke="rgba(255,255,255,0.15)"
           strokeWidth={1.5}
-          strokeDasharray="4 4"
+          strokeDasharray="6 6"
           dot={false}
           activeDot={false}
         />
@@ -101,11 +109,20 @@ export default function GDPChart({ countryData, activeYear }: GDPChartProps) {
           type="monotone"
           dataKey="countryValue"
           stroke="var(--accent)"
-          strokeWidth={2.5}
+          strokeWidth={3}
           dot={false}
-          activeDot={{ r: 6, fill: 'var(--surface-2)', stroke: 'var(--accent)', strokeWidth: 2 }}
+          activeDot={{ 
+            r: 6, 
+            fill: 'var(--accent)', 
+            stroke: 'black', 
+            strokeWidth: 2,
+          }}
         />
       </LineChart>
     </ResponsiveContainer>
   );
-}
+});
+
+GDPChart.displayName = 'GDPChart';
+
+export default GDPChart;

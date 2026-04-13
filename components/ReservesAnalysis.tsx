@@ -28,6 +28,15 @@ const importCoverData = [
   { country: 'Germany', months: 6 },
 ];
 
+const debtToGdpData = [
+  { metric: 'Fiscal Balance', value: 62 },
+  { metric: 'Current Account', value: 45 },
+  { metric: 'Reserve Adequacy', value: 78 },
+  { metric: 'External Debt', value: 55 },
+  { metric: 'Trade Openness', value: 70 },
+  { metric: 'FDI Inflows', value: 65 },
+];
+
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function formatDateLabel(dateStr: string): string {
@@ -99,10 +108,12 @@ export default function ReservesAnalysis() {
   const forexCanvasRef = useRef<HTMLCanvasElement>(null);
   const compositionCanvasRef = useRef<HTMLCanvasElement>(null);
   const importCoverCanvasRef = useRef<HTMLCanvasElement>(null);
+  const healthCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const forexChartRef = useRef<any>(null);
   const compositionChartRef = useRef<any>(null);
   const importCoverChartRef = useRef<any>(null);
+  const healthChartRef = useRef<any>(null);
 
   const [chartJsLoaded, setChartJsLoaded] = useState(false);
 
@@ -392,6 +403,82 @@ export default function ReservesAnalysis() {
     };
   }, [chartJsLoaded]);
 
+  // ── Chart 4: Economic Health Radar ───────────────────────────────────────
+  useEffect(() => {
+    if (!chartJsLoaded || !healthCanvasRef.current) return;
+    const Chart = window.Chart;
+
+    if (healthChartRef.current) healthChartRef.current.destroy();
+
+    const ctx = healthCanvasRef.current.getContext('2d');
+    if (!ctx) return;
+
+    healthChartRef.current = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: debtToGdpData.map(d => d.metric),
+        datasets: [
+          {
+            label: 'Health Score',
+            data: debtToGdpData.map(d => d.value),
+            borderColor: '#7bd1fa',
+            backgroundColor: 'rgba(123, 209, 250, 0.12)',
+            borderWidth: 2,
+            pointBackgroundColor: '#7bd1fa',
+            pointBorderColor: '#0a0c12',
+            pointBorderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 7,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            titleColor: '#94a3b8',
+            bodyColor: '#f8fafc',
+            borderColor: 'rgba(123, 209, 250, 0.3)',
+            borderWidth: 1,
+            padding: 12,
+            cornerRadius: 8,
+            bodyFont: { size: 14, weight: 'bold' as const },
+            callbacks: {
+              label: (ctx: any) => `${ctx.label}: ${ctx.parsed.r}/100`,
+            },
+          },
+        },
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              display: false,
+              stepSize: 25,
+            },
+            grid: {
+              color: 'rgba(255,255,255,0.06)',
+            },
+            angleLines: {
+              color: 'rgba(255,255,255,0.06)',
+            },
+            pointLabels: {
+              color: '#94a3b8',
+              font: { size: 11 },
+            },
+          },
+        },
+      },
+    });
+
+    return () => {
+      if (healthChartRef.current) healthChartRef.current.destroy();
+    };
+  }, [chartJsLoaded]);
+
   // ── Render ───────────────────────────────────────────────────────────────
   return (
     <section className="reserves-analysis-section">
@@ -448,7 +535,23 @@ export default function ReservesAnalysis() {
             )}
           </div>
         </ChartCard>
+
+        {/* Chart 4: Economic Health Radar */}
+        <ChartCard
+          title="Economic Health Index"
+          infoText="Radar view of key macroeconomic health indicators scored 0–100 based on latest available data."
+          source="Source: Composite index — World Bank, IMF, OECD indicators"
+        >
+          <div className="reserves-canvas-wrap reserves-canvas-square">
+            {chartJsLoaded ? (
+              <canvas ref={healthCanvasRef} id="economic-health-chart" />
+            ) : (
+              <div className="reserves-loading">Loading chart…</div>
+            )}
+          </div>
+        </ChartCard>
       </div>
     </section>
   );
 }
+
